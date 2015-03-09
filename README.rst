@@ -141,7 +141,7 @@ We can combine ``RelatedFilter`` and ``AllLookupsFilter``:
         author = filters.RelatedFilter(UserFilter, name='author')
 
     class UserFilter(filters.FilterSet):
-        username = AllLookupsFilter(name='username')
+        username = filters.AllLookupsFilter(name='username')
         ...
 
 then we can filter like so::
